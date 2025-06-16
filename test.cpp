@@ -1,15 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
-
 int main() {
-	string str;
-	getline(cin, str);
-	// str.append("helo");
-	cout<<str;
-	cout<<"Enter another string: ";
-	string str2;
-	getline(cin, str2);
-	str2.swap(str);
-	cout<<str2;
+	string s1,s2;
+	cin>>s1>>s2;
+	sort(s1.begin(), s1.end());
+	sort(s2.begin(), s2.end());
+	for(int i=0; i<s1.length(); i++) {
+		s1[i]=tolower(s1[i]);
+		s2[i]=tolower(s2[i]);
+	}
+	int output = s1.compare(s2);
+	cout<<output<<endl;
 	return 0;
 }
