@@ -3,9 +3,9 @@ using namespace std;
 
 int main() {
 	int t, num;
-	vector<int>digit(6,0);
 	cin>>t;
 	while(t--) {
+		vector<int>digit(6,0);
 		cin>>num;
 		for(int i=0; i<6; i++) {
 			if(num<=0) break;
@@ -23,6 +23,7 @@ int main() {
 		}else {
 			cout<<"NO"<<endl;
 		}
+		digit.clear();
 	}
 	return 0;
 }
